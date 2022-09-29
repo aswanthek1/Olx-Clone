@@ -5,6 +5,7 @@ import Signup from './Pages/Signup'
 import Login from './Pages/Login'
 import Create from './Pages/Create'; 
 import ViewPost from './Pages/ViewPost'
+import Post from './store/PostContext';
 
 /**
  * ?  =====Import Components=====
@@ -27,6 +28,9 @@ firebase.auth().onAuthStateChanged((user) =>{
   })
   return (
     <div>
+
+<Post>
+
       <Router>
         <Route exact path='/'>
           <Home />
@@ -44,6 +48,9 @@ firebase.auth().onAuthStateChanged((user) =>{
           <ViewPost/>
         </Route>
       </Router>
+
+</Post>
+
     </div>
   );
 }
